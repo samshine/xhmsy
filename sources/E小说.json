@@ -1,0 +1,32 @@
+{
+    "name": "E小说",
+    "url": "www.exiaoshuo.com",
+    "version": 101,
+    "search": {
+        "url": "https://www.exiaoshuo.com/iudshgirdsuhgiurdshi.php?ie=gbk&q=${key}",
+        "charset": "gbk",
+        "list": "div.type_show > div.bookbox > div.p10",
+        "name": "div.bookinfo > h4.bookname",
+        "author": "div.bookinfo > div.author@replace->作者：->",
+        "cover": "",
+        "detail": "div.bookinfo > h4.bookname"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "div.listmain > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}
